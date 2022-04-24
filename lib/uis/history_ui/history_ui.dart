@@ -29,6 +29,7 @@ class _HistoryUIState extends State<HistoryUI> {
         slivers: [
           SliverAppBar(
             pinned: true,
+            centerTitle: true,
             title: Text(
               "History",
               style: GoogleFonts.lato(

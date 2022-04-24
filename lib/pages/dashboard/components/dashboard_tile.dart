@@ -4,13 +4,14 @@ import 'package:uta_library/tools/custom_size.dart';
 import 'package:uta_library/tools/theme_tools.dart';
 
 class DashboardTile extends StatelessWidget {
-  final String title;
+  final String title, subtitle;
   final IconData leadingIcon;
   final void Function()? onTap;
   const DashboardTile({
     Key? key,
     required this.leadingIcon,
     required this.title,
+    required this.subtitle,
     this.onTap,
   }) : super(key: key);
 
@@ -19,26 +20,29 @@ class DashboardTile extends StatelessWidget {
     return SliverPadding(
       padding: EdgeInsets.all(customSize(context).width * 0.02),
       sliver: SliverToBoxAdapter(
-        child: ListTile(
-          contentPadding: const EdgeInsets.all(15.0),
-          title: Text(
-            title,
-            style: GoogleFonts.lato(
-              fontSize: customSize(context).height * 0.03,
-              fontWeight: FontWeight.bold,
-              // color: Colors.white,
+        child: Card(
+          child: ListTile(
+            title: Text(
+              title,
+              style: GoogleFonts.lato(
+                fontWeight: FontWeight.bold,
+                // color: Colors.white,
+              ),
             ),
+            subtitle: Text(subtitle),
+            leading: Card(
+              color: ThemeTools.secondaryColor,
+              shape: const CircleBorder(),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Icon(
+                  leadingIcon,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+            onTap: onTap,
           ),
-          leading: Icon(
-            leadingIcon,
-            size: customSize(context).height * 0.035,
-            color: ThemeTools.secondaryColor,
-          ),
-          trailing: Icon(
-            Icons.forward,
-            color: ThemeTools.secondaryColor,
-          ),
-          onTap: onTap,
         ),
       ),
     );

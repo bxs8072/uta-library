@@ -36,6 +36,7 @@ class Dashboard extends StatelessWidget {
         DashboardTile(
           leadingIcon: Icons.house,
           title: "Book Rooms",
+          subtitle: "Get a list of room in Central Library",
           onTap: () {
             customNavigator(context, RoomsUI(user: user));
           },
@@ -43,6 +44,7 @@ class Dashboard extends StatelessWidget {
         DashboardTile(
           leadingIcon: Icons.calculate,
           title: "Available Items",
+          subtitle: "Get a list of items in Central Library",
           onTap: () {
             customNavigator(context, ItemsUI(user: user));
           },

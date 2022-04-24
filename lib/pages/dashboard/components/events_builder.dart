@@ -14,12 +14,16 @@ class EventsBuilder extends StatelessWidget {
         borderRadius: BorderRadius.only(
             bottomLeft: Radius.circular(15), bottomRight: Radius.circular(15)),
       ),
-      elevation: 6.0,
+      elevation: 4.0,
       margin: EdgeInsets.all(customSize(context).width * 0.02),
       child: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.all(15.0),
+            padding: const EdgeInsets.only(
+              top: 15.0,
+              left: 15.0,
+              right: 15.0,
+            ),
             child: Text(
               "News & Events",
               style: GoogleFonts.lato(
@@ -52,21 +56,39 @@ class EventsBuilder extends StatelessWidget {
                       itemCount: snapshot.data!.docs.length,
                       itemBuilder: (context, i) {
                         return ListTile(
-                          title: Text(
-                            snapshot.data!.docs[i]["title"],
-                            style: GoogleFonts.lato(
-                                color: Colors.red,
-                                fontSize: customSize(context).height * 0.025),
+                          title: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const Divider(
+                                thickness: 2,
+                              ),
+                              Text(
+                                snapshot.data!.docs[i]["title"],
+                                style: GoogleFonts.lato(
+                                    color: Colors.red,
+                                    fontSize:
+                                        customSize(context).height * 0.025),
+                              ),
+                              Text(
+                                Intl().date("EEEE, d MMM, yyyy").format(
+                                    snapshot.data!.docs[i]["date"].toDate()),
+                                style: GoogleFonts.lato(),
+                              ),
+                            ],
                           ),
-                          trailing: Text(
-                            Intl().date("EEEE, d MMM, yyyy").format(
-                                snapshot.data!.docs[i]["date"].toDate()),
-                            style: GoogleFonts.lato(color: Colors.red),
-                          ),
-                          subtitle: Text(
-                            snapshot.data!.docs[i]["content"],
-                            style: GoogleFonts.lato(
-                                fontSize: customSize(context).height * 0.022),
+                          subtitle: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                snapshot.data!.docs[i]["content"],
+                                style: GoogleFonts.lato(
+                                    fontSize:
+                                        customSize(context).height * 0.022),
+                              ),
+                              const Divider(
+                                thickness: 2,
+                              )
+                            ],
                           ),
                         );
                       });
