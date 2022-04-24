@@ -43,7 +43,7 @@ class _RoomDetailUIState extends State<RoomDetailUI> {
     setState(() {
       _selectedDate = DateUtils.dateOnly(widget.selectedDate);
       _dateTimeController.text =
-          Intl().date("EEEE, d MMM, yyyy").format(_selectedDate!);
+          Intl().date("MM/dd/yyyy, EEEE").format(_selectedDate!);
     });
   }
 
@@ -104,7 +104,7 @@ class _RoomDetailUIState extends State<RoomDetailUI> {
             child: Container(
               alignment: Alignment.center,
               margin: EdgeInsets.symmetric(
-                  horizontal: customSize(context).width * 0.22, vertical: 10),
+                  horizontal: customSize(context).width * 0.175, vertical: 10),
               child: TextField(
                 textAlign: TextAlign.center,
                 style: GoogleFonts.lato(
@@ -122,6 +122,9 @@ class _RoomDetailUIState extends State<RoomDetailUI> {
                       color: ThemeTools.appBarForeGroundColor(context),
                     ),
                   ),
+                  prefixIcon: const Icon(
+                    Icons.calendar_today,
+                  ),
                 ),
                 onTap: () {
                   showDatePicker(
@@ -135,7 +138,7 @@ class _RoomDetailUIState extends State<RoomDetailUI> {
                     setState(() {
                       _selectedDate = DateUtils.dateOnly(value!);
                       _dateTimeController.text = Intl()
-                          .date("EEEE, d MMM, yyyy")
+                          .date("MM/dd/yyyy, EEEE")
                           .format(_selectedDate!);
                     });
                   });

@@ -85,14 +85,18 @@ class _RoomBookedPageState extends State<RoomBookedPage> {
                           }
                         },
                         calendarFormat: _calendarFormat,
-                        calendarStyle: const CalendarStyle(
+                        calendarStyle: CalendarStyle(
                           canMarkersOverflow: false,
                           isTodayHighlighted: true,
-                          todayDecoration: BoxDecoration(
+                          todayDecoration: const BoxDecoration(
                             color: Colors.deepOrange,
                             shape: BoxShape.circle,
                           ),
-                          selectedDecoration: BoxDecoration(
+                          markerDecoration: BoxDecoration(
+                            color: ThemeTools.appBarForeGroundColor(context),
+                            shape: BoxShape.circle,
+                          ),
+                          selectedDecoration: const BoxDecoration(
                             color: Colors.blue,
                             shape: BoxShape.circle,
                           ),
