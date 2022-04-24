@@ -26,8 +26,8 @@ The Central Library App for the simplication to book the study rooms in the Univ
 <img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/ios/room_detail_ui.png"  height="550" width="250"/>
 <img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/ios/room_detail_ui_dark.png"  height="550" width="250"/>
 <img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/ios/booking_confirmation.png"  height="550" width="250"/>
-<img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/ios/notifications_ui.png"  height="550" width="250"/>
-<img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/ios/notifications_ui_dark.png"  height="550" width="250"/>
+<img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/ios/notification_ui.png"  height="550" width="250"/>
+<img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/ios/notification_ui_dark.png"  height="550" width="250"/>
 <img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/ios/notifications.png"  height="550" width="250"/>
 <img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/ios/history_ui.png"  height="550" width="250"/>
 
@@ -49,7 +49,7 @@ The Central Library App for the simplication to book the study rooms in the Univ
 <img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/android/room_detail_ui.png"  height="550" width="250"/>
 <img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/android/room_detail_ui_dark.png"  height="550" width="250"/>
 <img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/android/booking_confirmation.png"  height="550" width="250"/>
-<img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/android/notifications_ui.png"  height="550" width="250"/>
-<img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/android/notifications_ui_dark.png"  height="550" width="250"/>
+<img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/android/notification_ui.png"  height="550" width="250"/>
+<img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/android/notification_ui_dark.png"  height="550" width="250"/>
 <img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/android/notifications.png"  height="550" width="250"/>
 <img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/android/history_ui.png"  height="550" width="250"/>
