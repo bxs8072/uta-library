@@ -64,9 +64,23 @@ class _ProfilePageState extends State<ProfilePage> {
           sliver: SliverToBoxAdapter(
             child: Card(
               child: ListTile(
-                leading: const Icon(Icons.dark_mode),
+                leading: Card(
+                  color: ThemeTools.primaryColor,
+                  shape: const CircleBorder(),
+                  child: const Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Icon(
+                      Icons.dark_mode,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
                 title: Text(
                   "Dark Mode",
+                  style: GoogleFonts.lato(),
+                ),
+                subtitle: Text(
+                  "Change Theme",
                   style: GoogleFonts.lato(),
                 ),
                 trailing: Switch(
@@ -85,8 +99,25 @@ class _ProfilePageState extends State<ProfilePage> {
           sliver: SliverToBoxAdapter(
             child: Card(
               child: ListTile(
-                leading: const Icon(Icons.person),
-                title: Text(widget.user.fullName),
+                leading: Card(
+                  color: ThemeTools.secondaryColor,
+                  shape: const CircleBorder(),
+                  child: const Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Icon(
+                      Icons.person,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+                title: Text(
+                  widget.user.fullName,
+                  style: GoogleFonts.lato(),
+                ),
+                subtitle: Text(
+                  "Full Name",
+                  style: GoogleFonts.lato(),
+                ),
                 trailing: IconButton(
                     onPressed: () {
                       showModalBottomSheet(
@@ -105,8 +136,25 @@ class _ProfilePageState extends State<ProfilePage> {
           sliver: SliverToBoxAdapter(
             child: Card(
               child: ListTile(
-                title: const Text("History"),
-                leading: const Icon(Icons.history),
+                title: Text(
+                  "History",
+                  style: GoogleFonts.lato(),
+                ),
+                subtitle: Text(
+                  "Check you room booking history",
+                  style: GoogleFonts.lato(),
+                ),
+                leading: Card(
+                  color: ThemeTools.secondaryColor,
+                  shape: const CircleBorder(),
+                  child: const Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Icon(
+                      Icons.history,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
                 onTap: () {
                   // Navigate to order history UI
                   customNavigator(
@@ -116,7 +164,6 @@ class _ProfilePageState extends State<ProfilePage> {
                         user: widget.user,
                       ));
                 },
-                trailing: const Icon(Icons.forward),
               ),
             ),
           ),

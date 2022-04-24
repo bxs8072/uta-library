@@ -18,7 +18,9 @@ class DashboardTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverPadding(
-      padding: EdgeInsets.all(customSize(context).width * 0.02),
+      padding: EdgeInsets.symmetric(
+          horizontal: customSize(context).width * 0.02,
+          vertical: customSize(context).width * 0.01),
       sliver: SliverToBoxAdapter(
         child: Card(
           child: ListTile(

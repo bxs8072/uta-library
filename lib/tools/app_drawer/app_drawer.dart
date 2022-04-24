@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:uta_library/models/user.dart';
-import 'package:uta_library/pages/profile_page/profile_page.dart';
 import 'package:uta_library/pages/room_booked_page/room_booked_page.dart';
-import 'package:uta_library/screens/home_screen/home_screen.dart';
 import 'package:uta_library/screens/landing_screen/landing_screen.dart';
 import 'package:uta_library/tools/app_drawer/components/app_drawer_header.dart';
 import 'package:uta_library/tools/custom_navigator.dart';
