@@ -6,6 +6,7 @@ import 'package:uta_library/models/room.dart';
 import 'package:uta_library/models/user.dart';
 import 'package:uta_library/tools/custom_navigator.dart';
 import 'package:uta_library/tools/custom_size.dart';
+import 'package:uta_library/tools/theme_tools.dart';
 import 'package:uta_library/uis/notifications_ui/components/notifications_ui_app_bar.dart';
 import 'package:uta_library/uis/room_detail_ui/room_detail_ui.dart';
 
@@ -21,10 +22,24 @@ class NotificationsUI extends StatelessWidget {
           NotificationsUIAppBar(key: key),
           SliverToBoxAdapter(
             child: ListTile(
+              leading: const Card(
+                color: Colors.red,
+                shape: CircleBorder(),
+                child: Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Icon(
+                    Icons.clear_all,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
               title: Text(
                 "Clear Notifications",
-                style: GoogleFonts.lato(
-                    fontSize: customSize(context).height * 0.025),
+                style: GoogleFonts.lato(),
+              ),
+              subtitle: Text(
+                "Clear all the notifications",
+                style: GoogleFonts.lato(),
               ),
               trailing: IconButton(
                 onPressed: () {
@@ -42,7 +57,7 @@ class NotificationsUI extends StatelessWidget {
                 },
                 icon: const Icon(
                   Icons.delete_sweep,
-                  color: Colors.black,
+                  color: Colors.red,
                 ),
               ),
             ),
@@ -83,18 +98,14 @@ class NotificationsUI extends StatelessWidget {
                           contentPadding: const EdgeInsets.all(12.0),
                           title: Text(
                             snaphsot.data!.docs[i]["title"],
-                            style: GoogleFonts.lato(
-                              fontSize: customSize(context).height * 0.025,
-                            ),
+                            style: GoogleFonts.lato(),
                           ),
                           subtitle: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
                                 snaphsot.data!.docs[i]["body"]["room"]["room"],
-                                style: GoogleFonts.lato(
-                                  fontSize: customSize(context).height * 0.022,
-                                ),
+                                style: GoogleFonts.lato(),
                               ),
                               Text(
                                 "Date: " +
@@ -111,9 +122,7 @@ class NotificationsUI extends StatelessWidget {
                                                   ["booked"]["startTime"]
                                               .toDate(),
                                         ),
-                                style: GoogleFonts.lato(
-                                  fontSize: customSize(context).height * 0.022,
-                                ),
+                                style: GoogleFonts.lato(),
                               ),
                             ],
                           ),
