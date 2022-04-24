@@ -328,7 +328,10 @@ class _RoomBookedPageState extends State<RoomBookedPage> {
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-                            subtitle: Text(_room.room),
+                            subtitle: Text(
+                              _room.room,
+                              style: GoogleFonts.lato(),
+                            ),
                           );
                         },
                       ),
