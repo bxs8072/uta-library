@@ -29,7 +29,6 @@ class _ProfilePageState extends State<ProfilePage> {
             child: ProfilePicture(user: widget.user),
           ),
         ),
-
         SliverToBoxAdapter(
           child: RichText(
             textAlign: TextAlign.center,
@@ -65,6 +64,28 @@ class _ProfilePageState extends State<ProfilePage> {
           sliver: SliverToBoxAdapter(
             child: Card(
               child: ListTile(
+                leading: const Icon(Icons.dark_mode),
+                title: Text(
+                  "Dark Mode",
+                  style: GoogleFonts.lato(),
+                ),
+                trailing: Switch(
+                  activeColor: ThemeTools.secondaryColor,
+                  onChanged: (val) {
+                    ThemeTools.changeTheme(context);
+                  },
+                  value: ThemeTools.isDarkMode(context),
+                ),
+              ),
+            ),
+          ),
+        ),
+        SliverPadding(
+          padding: const EdgeInsets.symmetric(horizontal: 12),
+          sliver: SliverToBoxAdapter(
+            child: Card(
+              child: ListTile(
+                leading: const Icon(Icons.person),
                 title: Text(widget.user.fullName),
                 trailing: IconButton(
                     onPressed: () {
@@ -79,24 +100,13 @@ class _ProfilePageState extends State<ProfilePage> {
             ),
           ),
         ),
-        // SliverPadding(
-        //   padding: EdgeInsets.symmetric(horizontal: 12),
-        //   sliver: SliverToBoxAdapter(
-        //     child: Card(
-        //       child: ListTile(
-        //         title: Text("Change Password"),
-        //         trailing: IconButton(onPressed: () {}, icon: Icon(Icons.edit)),
-        //       ),
-        //     ),
-        //   ),
-        // ),
         SliverPadding(
           padding: const EdgeInsets.symmetric(horizontal: 12),
           sliver: SliverToBoxAdapter(
             child: Card(
               child: ListTile(
                 title: const Text("History"),
-                trailing: const Icon(Icons.history),
+                leading: const Icon(Icons.history),
                 onTap: () {
                   // Navigate to order history UI
                   customNavigator(
@@ -106,6 +116,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         user: widget.user,
                       ));
                 },
+                trailing: const Icon(Icons.forward),
               ),
             ),
           ),

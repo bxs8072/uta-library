@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:uta_library/models/room.dart';
 import 'package:uta_library/models/user.dart';
+import 'package:uta_library/tools/app_drawer/app_drawer.dart';
 import 'package:uta_library/tools/custom_navigator.dart';
 import 'package:uta_library/uis/room_detail_ui/room_detail_ui.dart';
 import 'package:uta_library/uis/rooms_ui/components/room_detail_card.dart';
@@ -14,10 +15,10 @@ class RoomsUI extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      endDrawer: AppDrawer(user: user),
       body: CustomScrollView(
         slivers: [
           const RoomsUIAppBar(),
-
           //Render the list of all the rooms with their details
           StreamBuilder<QuerySnapshot>(
               stream:

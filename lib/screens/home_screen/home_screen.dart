@@ -8,6 +8,7 @@ import 'package:uta_library/pages/dashboard/dashboard.dart';
 import 'package:uta_library/pages/profile_page/profile_page.dart';
 import 'package:uta_library/pages/room_booked_page/room_booked_page.dart';
 import 'package:uta_library/screens/home_screen/home_screen_bloc.dart';
+import 'package:uta_library/tools/app_drawer/app_drawer.dart';
 import 'package:uta_library/tools/custom_navigator.dart';
 import 'package:uta_library/tools/notification_service.dart';
 import 'package:uta_library/tools/theme_tools.dart';
@@ -57,9 +58,13 @@ class _HomeScreenState extends State<HomeScreen> {
       initialData: 0,
       builder: (context, snapshot) {
         return Scaffold(
+            drawer: AppDrawer(user: widget.user),
             body: [
               Dashboard(user: widget.user),
-              RoomBookedPage(user: widget.user),
+              RoomBookedPage(
+                user: widget.user,
+                canPop: false,
+              ),
               ProfilePage(user: widget.user),
             ][snapshot.data!],
             bottomNavigationBar: BottomNavyBar(

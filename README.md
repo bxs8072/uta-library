@@ -1,16 +1,19 @@
-# uta_library
+# UTA Mavs Library
 
-A new Flutter project.
+The Central Library App for the simplication to book the study rooms in the University of Texas at Arlington.
 
-## Getting Started
+## Features Available
+1. Registration and login using valid UTA email address
+2. News and events from Central Library
+3. Book study room and study materials 24/7 except for some holiday or emergency situations.
+4. Get notifications and updates
 
-This project is a starting point for a Flutter application.
+## Screenshots
+<img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/Screenshot_1648591826.png" alt="Your image title" height = "500" width="250"/>
+<img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/Screenshot_1648591834.png" alt="Your image title" height = "500" width="250"/>
+<img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/Screenshot_1648591858.png" alt="Your image title" height = "500" width="250"/>
+<img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/Screenshot_1648591884.png" alt="Your image title" height = "500" width="250"/>
+<img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/Screenshot_1648591890.png" alt="Your image title" height = "500" width="250"/>
+<img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/Screenshot_1648591893.png" alt="Your image title" height = "500" width="250"/>
+<img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/Screenshot_1648591895.png" alt="Your image title" height = "500" width="250"/>
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.

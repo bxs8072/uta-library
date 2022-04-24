@@ -33,6 +33,7 @@ class RoomsUIAppBar extends StatelessWidget {
           ],
         ),
       ),
+      leading: const BackButton(),
       backgroundColor: Colors.transparent,
       foregroundColor: ThemeTools.appBarForeGroundColor(context),
       pinned: true,

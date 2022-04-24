@@ -5,12 +5,16 @@ import 'package:uta_library/tools/theme_tools.dart';
 
 class RoomBookedPageAppBar extends StatelessWidget {
   final User user;
-  const RoomBookedPageAppBar({Key? key, required this.user}) : super(key: key);
+  final bool canPop;
+  const RoomBookedPageAppBar(
+      {Key? key, required this.user, required this.canPop})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
       centerTitle: true,
+      leading: canPop ? const BackButton() : const SizedBox(),
       title: RichText(
         text: TextSpan(
           style: GoogleFonts.lato(

@@ -12,6 +12,7 @@ import 'package:uta_library/models/booking.dart';
 import 'package:uta_library/models/room.dart';
 import 'package:uta_library/models/user.dart';
 import 'package:uta_library/pages/room_booked_page/room_booked_page_appbar.dart';
+import 'package:uta_library/tools/app_drawer/app_drawer.dart';
 import 'package:uta_library/tools/custom_navigator.dart';
 import 'package:uta_library/tools/custom_size.dart';
 import 'package:uta_library/tools/theme_tools.dart';
@@ -20,7 +21,9 @@ import 'package:uta_library/uis/room_detail_ui/room_detail_ui.dart';
 
 class RoomBookedPage extends StatefulWidget {
   final User user;
-  const RoomBookedPage({Key? key, required this.user}) : super(key: key);
+  final bool canPop;
+  const RoomBookedPage({Key? key, required this.user, required this.canPop})
+      : super(key: key);
 
   @override
   State<RoomBookedPage> createState() => _RoomBookedPageState();
@@ -34,9 +37,11 @@ class _RoomBookedPageState extends State<RoomBookedPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      endDrawer: AppDrawer(user: widget.user),
       body: CustomScrollView(
         slivers: [
           RoomBookedPageAppBar(
+            canPop: widget.canPop,
             user: widget.user,
             key: widget.key,
           ),

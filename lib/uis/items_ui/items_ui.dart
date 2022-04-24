@@ -20,7 +20,9 @@ class ItemsUI extends StatelessWidget {
               builder: (context, snapshot) {
                 if (!snapshot.hasData) {
                   return const SliverToBoxAdapter(
-                    child: CircularProgressIndicator(),
+                    child: Center(
+                      child: CircularProgressIndicator(),
+                    ),
                   );
                 }
 

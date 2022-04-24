@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:uta_library/models/room.dart';
 import 'package:uta_library/models/user.dart';
+import 'package:uta_library/tools/app_drawer/app_drawer.dart';
 import 'package:uta_library/tools/custom_size.dart';
 import 'package:uta_library/tools/theme_tools.dart';
 import 'package:uta_library/uis/room_detail_ui/components/features_card.dart';
@@ -49,9 +50,11 @@ class _RoomDetailUIState extends State<RoomDetailUI> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      endDrawer: AppDrawer(user: widget.user),
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
+            leading: const BackButton(),
             pinned: true,
             title: Text(
               widget.room.room,

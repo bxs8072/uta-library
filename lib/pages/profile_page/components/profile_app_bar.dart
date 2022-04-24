@@ -40,61 +40,56 @@ class ProfileAppBar extends StatelessWidget {
       foregroundColor: ThemeTools.appBarForeGroundColor(context),
       backgroundColor: Colors.transparent,
       pinned: true,
-      leading: IconButton(
-          onPressed: () {
-            Platform.isIOS
-                ? showCupertinoDialog(
-                    context: context,
-                    barrierDismissible: true,
-                    builder: (ctx) => CupertinoAlertDialog(
-                      title: const Text("Are you sure?"),
-                      content: const Text("Do you want to logout?"),
-                      actions: [
-                        CupertinoDialogAction(
-                          onPressed: () => Auth().logout().then(
-                                (value) => Navigator.pop(ctx),
-                              ),
-                          child: const Text("Yes"),
-                        ),
-                        CupertinoDialogAction(
-                          onPressed: () => Navigator.pop(ctx),
-                          child: const Text("No"),
-                        ),
-                      ],
-                    ),
-                  )
-                : showDialog(
-                    context: context,
-                    barrierDismissible: true,
-                    builder: (ctx) => AlertDialog(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15)),
-                      title: const Text("Are you sure?"),
-                      content: const Text("Do you want to logout?"),
-                      actions: [
-                        TextButton(
-                          onPressed: Auth().logout,
-                          child: const Text("Yes"),
-                        ),
-                        TextButton(
-                          onPressed: () => Navigator.pop(ctx),
-                          child: const Text("No"),
-                        ),
-                      ],
-                    ),
-                  );
-          },
-          icon: const Icon(Icons.logout)),
       actions: [
         IconButton(
-          onPressed: () {
-            ThemeTools.changeTheme(context);
-          },
-          icon: Icon(
-            ThemeTools.isDarkMode(context) ? Icons.light_mode : Icons.dark_mode,
-          ),
-          color: ThemeTools.appBarForeGroundColor(context),
-        ),
+            onPressed: () {
+              Platform.isIOS
+                  ? showCupertinoDialog(
+                      context: context,
+                      barrierDismissible: true,
+                      builder: (ctx) => CupertinoAlertDialog(
+                        title: const Text("Are you sure?"),
+                        content: const Text("Do you want to logout?"),
+                        actions: [
+                          CupertinoDialogAction(
+                            onPressed: () => Auth().logout().then(
+                                  (value) => Navigator.pop(ctx),
+                                ),
+                            child: const Text("Yes"),
+                          ),
+                          CupertinoDialogAction(
+                            onPressed: () => Navigator.pop(ctx),
+                            child: const Text("No"),
+                          ),
+                        ],
+                      ),
+                    )
+                  : showDialog(
+                      context: context,
+                      barrierDismissible: true,
+                      builder: (ctx) => AlertDialog(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15)),
+                        title: const Text("Are you sure?"),
+                        content: const Text("Do you want to logout?"),
+                        actions: [
+                          TextButton(
+                            onPressed: () {
+                              Auth()
+                                  .logout()
+                                  .then((value) => Navigator.pop(ctx));
+                            },
+                            child: const Text("Yes"),
+                          ),
+                          TextButton(
+                            onPressed: () => Navigator.pop(ctx),
+                            child: const Text("No"),
+                          ),
+                        ],
+                      ),
+                    );
+            },
+            icon: const Icon(Icons.logout)),
       ],
     );
   }
