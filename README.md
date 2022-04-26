@@ -33,23 +33,15 @@ The Central Library App for the simplication to book the study rooms in the Univ
 
 ## Screenshots from Android Device
 <img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/android/login_page.png"  height="550" width="250"/>
-<img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/android/login_dark.png"  height="550" width="250"/>
 <img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/android/register_page.png"  height="550" width="250"/>
 <img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/android/dashboard.png"  height="550" width="250"/>
-<img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/android/dashboard_dark.png"  height="550" width="250"/>
 <img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/android/app_drawer.png"  height="550" width="250"/>
-<img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/android/app_drawer_dark.png"  height="550" width="250"/>
 <img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/android/room_booked_page.png"  height="550" width="250"/>
-<img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/android/room_booked_page_dark.png"  height="550" width="250"/>
 <img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/android/profile_page.png"  height="550" width="250"/>
-<img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/android/profile_page_dark.png"  height="550" width="250"/>
 <img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/android/log_out_confirmation.png"  height="550" width="250"/>
 <img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/android/room_list_ui.png"  height="550" width="250"/>
-<img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/android/room_list_ui_dark.png"  height="550" width="250"/>
 <img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/android/room_detail_ui.png"  height="550" width="250"/>
-<img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/android/room_detail_ui_dark.png"  height="550" width="250"/>
 <img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/android/booking_confirmation.png"  height="550" width="250"/>
 <img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/android/notification_ui.png"  height="550" width="250"/>
-<img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/android/notification_ui_dark.png"  height="550" width="250"/>
 <img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/android/notifications.png"  height="550" width="250"/>
 <img src="https://github.com/bxs8072/cse-3311-team-1-project/blob/master/screenshots/android/history_ui.png"  height="550" width="250"/>
