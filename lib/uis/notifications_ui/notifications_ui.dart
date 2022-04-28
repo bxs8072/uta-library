@@ -5,8 +5,6 @@ import 'package:intl/intl.dart';
 import 'package:uta_library/models/room.dart';
 import 'package:uta_library/models/user.dart';
 import 'package:uta_library/tools/custom_navigator.dart';
-import 'package:uta_library/tools/custom_size.dart';
-import 'package:uta_library/tools/theme_tools.dart';
 import 'package:uta_library/uis/notifications_ui/components/notifications_ui_app_bar.dart';
 import 'package:uta_library/uis/room_detail_ui/room_detail_ui.dart';
 
